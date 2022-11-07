@@ -1,0 +1,2 @@
+D:\Unity Projects\Submarino_EC\obj\Debug\WaterSystem.Editor.csproj.AssemblyReference.cache
+D:\Unity Projects\Submarino_EC\obj\Debug\WaterSystem.Editor.csproj.CoreCompileInputs.cache
