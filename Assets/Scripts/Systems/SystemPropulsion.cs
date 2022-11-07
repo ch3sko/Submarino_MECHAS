@@ -41,8 +41,7 @@ public class SystemPropulsion : MonoBehaviour
 
 
     void FixedUpdate()
-    {
-        Move();
+    {       
 
         if (_isAcelerar && (submarino.curSpeed) == 0)
         {
@@ -69,27 +68,6 @@ public class SystemPropulsion : MonoBehaviour
 
            
         EtapaMarcha();
-    }
-
-    void Move()
-    {
-        /* if (Input.GetKey(KeyCode.W))
-         {
-             submarino.curSpeed += submarino.speedChangeAmount;
-         }
-
-         else if (Input.GetKey(KeyCode.S))
-         {
-             submarino.curSpeed -= submarino.speedChangeAmount;
-         }
-
-         else */
-        if (Mathf.Abs(submarino.curSpeed) <= submarino.minSpeed)
-        {
-            submarino.curSpeed = 0;
-        }
-        submarino.curSpeed = Mathf.Clamp(submarino.curSpeed, -submarino.maxBackwardSpeed, submarino.maxForwardSpeed);
-        submarino.subRb.AddForce(transform.forward * submarino.curSpeed);
     }
 
     private bool _AcelerarButton = false;

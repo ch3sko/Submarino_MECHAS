@@ -17,36 +17,28 @@ public class SubmarinoMovement : MonoBehaviour
 
     public float stabilizationSmoothing;
 
-
-    //public float timeZeroToMax;
-
     public float KPH;
 
     public Rigidbody subRb;
 
     private void Start()
-    { 
-        
-        subRb = GetComponent<Rigidbody>();
-       // forwardVelocity = 0;
-        
+    {       
+        subRb = GetComponent<Rigidbody>();       
     }
 
     void FixedUpdate()
     {
+        Move();
         Turn();
         Rise();
         Stabilize();
 
-        KPH = ((subRb.velocity.magnitude)/2) *10; // NOTA: estoy hacienod trampa para que el medidor me de el valor que se ingresa enla casilla
-        
-        
-        //submarinoForward();    
+        KPH = ((subRb.velocity.magnitude)/2) *10; // NOTA: estoy hacienod trampa para que el medidor me de el valor que se ingresa enla casilla                    
     }
 
     void Move()
     {
-        if (Input.GetKey(KeyCode.W))
+        /*if (Input.GetKey(KeyCode.W))
         {
             curSpeed += speedChangeAmount;
         }
@@ -56,7 +48,7 @@ public class SubmarinoMovement : MonoBehaviour
             curSpeed -= speedChangeAmount;
         }
 
-        else if (Mathf.Abs(curSpeed) <= minSpeed)
+        else*/ if (Mathf.Abs(curSpeed) <= minSpeed)
         {
             curSpeed = 0;
         }
@@ -93,17 +85,5 @@ public class SubmarinoMovement : MonoBehaviour
     {
         subRb.MoveRotation(Quaternion.Slerp(subRb.rotation, Quaternion.Euler(new Vector3(0, subRb.rotation.eulerAngles.y, 0)), stabilizationSmoothing));
     }
-   /* public void submarinoForward()
-    {
-        accelRatePerSec = curSpeed / timeZeroToMax;
-
-        forwardVelocity += accelRatePerSec * Time.deltaTime;
-        forwardVelocity = Mathf.Min(forwardVelocity, (curSpeed / 10));       //NOTA: Estoy dividienod para 10 la velocidad para que no vaya tan rapido ya que el Environment no es tan grande. 
-
-        subRb.velocity = transform.forward * forwardVelocity;
-        //Debug.Log(subRG.velocity.z);
-
-        KPH = subRb.velocity.magnitude *10; //kilometros por hora
-    }*/
-
+  
 }
