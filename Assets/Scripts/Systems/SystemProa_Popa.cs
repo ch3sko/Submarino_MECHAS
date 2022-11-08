@@ -33,5 +33,4 @@ public class SystemProa_Popa : MonoBehaviour
         
     }
 
-
 }

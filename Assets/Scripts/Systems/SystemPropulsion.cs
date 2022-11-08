@@ -40,7 +40,7 @@ public class SystemPropulsion : MonoBehaviour
     }
 
 
-    void FixedUpdate()
+    void Update()
     {       
 
         if (_isAcelerar && (submarino.curSpeed) == 0)
@@ -82,6 +82,7 @@ public class SystemPropulsion : MonoBehaviour
             _AcelerarButton = value;
             _isAcelerar = true;
             _isRalentizar = false;
+            inputVal.text = "0";
             EnableButtons();
         }
     }
@@ -98,6 +99,7 @@ public class SystemPropulsion : MonoBehaviour
             _AcelerarButton = value;
             _isAcelerar = false;
             _isRalentizar = true;
+            inputVal.text = "0";
             EnableButtons();
         }
     }

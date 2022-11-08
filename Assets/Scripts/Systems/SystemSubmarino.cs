@@ -7,6 +7,7 @@ public class SystemSubmarino : MonoBehaviour
    // public SubmarinoMovement submarinoMovement;
     public SystemPropulsion systemPropulsion;
     public SystemProa_Popa systemProa_Popa;
+    public SystemTimon systemTimon;
  
 
   
@@ -18,6 +19,7 @@ public class SystemSubmarino : MonoBehaviour
     void Update()
     {
         systemPropulsion.Propulsion();
+        systemTimon.Timon();
 
     }
 }
