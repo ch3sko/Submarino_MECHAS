@@ -23,7 +23,7 @@ public class SystemTimon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (submarino.anguloTarget >= 40)
+        if (submarino.anguloTimon >= 40)
         {
             estribor_btn.interactable = false;
         }
@@ -32,7 +32,7 @@ public class SystemTimon : MonoBehaviour
             estribor_btn.interactable = true;
         }
 
-        if (submarino.anguloTarget <= -40)
+        if (submarino.anguloTimon <= -40)
         {
             babor_btn.interactable = false;
         }
@@ -51,20 +51,20 @@ public class SystemTimon : MonoBehaviour
     public void EnterButton()
     {
        
-        submarino.anguloTarget = float.Parse(inputVal.text);
+        submarino.anguloTimon = float.Parse(inputVal.text);
         
     }
 
     public void BaborButton()
     {
-        submarino.anguloTarget -=  5;
-        Debug.Log(submarino.anguloTarget);
+        submarino.anguloTimon -=  5;
+        Debug.Log(submarino.anguloTimon);
     }
 
     public void EstriborButton()
     {
-        submarino.anguloTarget +=  5;
-        Debug.Log(submarino.anguloTarget);
+        submarino.anguloTimon +=  5;
+        Debug.Log(submarino.anguloTimon);
     }
 
 

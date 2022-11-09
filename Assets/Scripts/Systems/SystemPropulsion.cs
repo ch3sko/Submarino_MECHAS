@@ -64,7 +64,7 @@ public class SystemPropulsion : MonoBehaviour
 
     public void Propulsion()
     {
-        gaugePropulsion.SetValue((submarino.KPH));    //NOTA: lo vuelvo a mltiplar por 10 para que en el medidor se muestre el valor "real"
+        gaugePropulsion.SetValue((submarino.KPH));   
 
            
         EtapaMarcha();
@@ -133,7 +133,6 @@ public class SystemPropulsion : MonoBehaviour
                 etapaMarchaTxt.text = "V";
             }
 
-            //Debug.Log("IS ACELERAR = " + _isAcelerar);
         }
         else if (_isRalentizar)
         {
@@ -145,8 +144,6 @@ public class SystemPropulsion : MonoBehaviour
             {
                 etapaMarchaTxt.text = "III";
             }
-
-           // Debug.Log("IS RALENTIZAR= " + _isRalentizar);
         }
        
       

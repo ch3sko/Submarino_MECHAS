@@ -28,4 +28,6 @@ public class Gauge : MonoBehaviour
         val = Mathf.Clamp(val, 0f, maxVal);
     }
 
+ 
+
 }

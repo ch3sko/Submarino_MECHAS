@@ -135,14 +135,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d359a761916471242a24cc8c54fb0316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  submarino: {fileID: 0}
-  gaugeProa: {fileID: 0}
-  gaugePopa: {fileID: 0}
-  subir_btn: {fileID: 0}
-  bajar_btn: {fileID: 0}
-  enter_btn: {fileID: 0}
-  inputVal: {fileID: 0}
-  indicBloqueo: {fileID: 0}
+  submarino: {fileID: 593269886}
+  gaugeProa: {fileID: 1585134288583343208}
+  gaugePopa: {fileID: 1585134289425856678}
+  subirProa_btn: {fileID: 1585134289133373946}
+  bajarProa_btn: {fileID: 1585134288818333715}
+  enterProa_btn: {fileID: 1585134289787363336}
+  inputValProa: {fileID: 1585134288137584341}
+  indicBloqueo: {fileID: 1585134288149515449}
+  subirPopa_btn: {fileID: 1585134288358895951}
+  bajarPopa_btn: {fileID: 1585134288179504291}
+  enterPopa_btn: {fileID: 1585134289695322726}
+  inputValPopa: {fileID: 1585134287848001084}
+--- !u!84 &346009408
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterDepthMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 3
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthFormat: 2
+  m_ColorFormat: 142
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!1 &404020489
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,42 +365,6 @@ MonoBehaviour:
   indicAvante: {fileID: 1585134288545827760}
   indicAtras: {fileID: 1585134289880947441}
   etapaMarchaTxt: {fileID: 1585134288768382654}
---- !u!84 &561386895
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDepthMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthFormat: 2
-  m_ColorFormat: 142
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
 --- !u!1 &593269881
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +487,10 @@ MonoBehaviour:
   stabilizationSmoothing: 0.05
   KPH: 0
   angulo: 0
-  anguloTarget: 0
+  anguloProa: 0
+  anguloPopa: 0
+  anguloTimon: 0
+  anguloInclinacion: 0
   subRb: {fileID: 0}
   _rotation: {x: 0, y: 0, z: 0}
 --- !u!54 &593269887
@@ -585,8 +592,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   needle: {fileID: 1585134288186200088}
   maxVal: 240
-  startPos: 122.3
-  endPos: -119.75
+  startPos: 122
+  endPos: -122
 --- !u!1 &870782438
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +713,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cac2e60f3f6f2447ad9b550450f60ed, type: 3}
---- !u!84 &1174246845
+--- !u!84 &1320711360
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -772,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   systemPropulsion: {fileID: 467127776}
-  systemProa_Popa: {fileID: 0}
+  systemProa_Popa: {fileID: 172644497}
   systemTimon: {fileID: 1843925471}
 --- !u!4 &1371152002
 Transform:
@@ -1071,7 +1078,6 @@ MonoBehaviour:
   babor_btn: {fileID: 1585134288770785051}
   estribor_btn: {fileID: 1585134289778911963}
   inputVal: {fileID: 1585134288440455336}
-  rotAmount: 0
 --- !u!4 &1924122064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4554327062270080, guid: 2cac2e60f3f6f2447ad9b550450f60ed, type: 3}
@@ -3349,7 +3355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 30
+  m_text: 10
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5219,7 +5225,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585134288179504290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 172644497}
+        m_TargetAssemblyTypeName: SystemProa_Popa, Assembly-CSharp
+        m_MethodName: BajarPopa
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1585134288179504300
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5322,13 +5340,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585134288186200088}
-  m_LocalRotation: {x: 0, y: 0, z: 0.87588596, w: 0.4825182}
+  m_LocalRotation: {x: 0, y: 0, z: 0.8746197, w: 0.4848096}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1585134289551906593}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 122.3}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 122}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.7999878, y: 0.90000916}
@@ -7634,7 +7652,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585134288358895950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 172644497}
+        m_TargetAssemblyTypeName: SystemProa_Popa, Assembly-CSharp
+        m_MethodName: SubirPopa
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1585134288385462850
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8516,7 +8546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: 0}
+  m_AnchoredPosition: {x: 120.35, y: 0}
   m_SizeDelta: {x: 1283.1, y: 830}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1585134288513848754
@@ -9302,6 +9332,7 @@ GameObject:
   - component: {fileID: 1585134288583343206}
   - component: {fileID: 1585134288583343204}
   - component: {fileID: 1585134288583343205}
+  - component: {fileID: 1585134288583343208}
   m_Layer: 5
   m_Name: Gauge
   m_TagString: Untagged
@@ -9309,6 +9340,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1585134288583343208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585134288583343207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0793bbc13c98b344fba1ecbe0436d3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needle: {fileID: 1585134289333997105}
+  maxVal: 40
+  startPos: 90
+  endPos: 190
 --- !u!222 &1585134288596492796
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11938,7 +11985,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585134288818333714}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 172644497}
+        m_TargetAssemblyTypeName: SystemProa_Popa, Assembly-CSharp
+        m_MethodName: BajarProaButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1585134288818333724
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13150,13 +13209,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585134288972389568}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.005846863, w: 0.9999829}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1550289210}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.67}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.80017066, y: 0.90003943}
@@ -14626,7 +14685,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585134289133373945}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 172644497}
+        m_TargetAssemblyTypeName: SystemProa_Popa, Assembly-CSharp
+        m_MethodName: SubirProaButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1585134289133373947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15833,13 +15904,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585134289333997105}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7114791, w: 0.70270735}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1585134288583343206}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.711}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.7999878, y: 0.90000916}
@@ -16783,6 +16854,7 @@ GameObject:
   - component: {fileID: 1585134289425856676}
   - component: {fileID: 1585134289425856698}
   - component: {fileID: 1585134289425856699}
+  - component: {fileID: 1585134289425856678}
   m_Layer: 5
   m_Name: Gauge POPA
   m_TagString: Untagged
@@ -16790,6 +16862,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1585134289425856678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585134289425856677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0793bbc13c98b344fba1ecbe0436d3ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needle: {fileID: 1585134289522533522}
+  maxVal: 20
+  startPos: -90
+  endPos: -180
 --- !u!222 &1585134289425856698
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17610,13 +17698,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585134289522533522}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7114129, w: 0.7027742}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1585134289425856676}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.7}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.7999878, y: 0.90000916}
@@ -19379,7 +19467,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585134289695322725}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 172644497}
+        m_TargetAssemblyTypeName: SystemProa_Popa, Assembly-CSharp
+        m_MethodName: EnterButtonPopa
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1585134289695322727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19961,7 +20061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1585134289787363343}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 172644497}
+        m_TargetAssemblyTypeName: SystemProa_Popa, Assembly-CSharp
+        m_MethodName: EnterButtonProa
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1585134289787363337
 RectTransform:
   m_ObjectHideFlags: 0

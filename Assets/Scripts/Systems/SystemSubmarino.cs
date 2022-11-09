@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class SystemSubmarino : MonoBehaviour
@@ -20,6 +21,7 @@ public class SystemSubmarino : MonoBehaviour
     {
         systemPropulsion.Propulsion();
         systemTimon.Timon();
+        systemProa_Popa.ProaPopa();
 
     }
 }
